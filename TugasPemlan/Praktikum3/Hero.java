@@ -32,6 +32,11 @@ public class Hero {
             damage = 0;
         }
         this.health -= damage;
+
+        if(this.health <= 0){
+            this.health = 0;
+        }
+        
         System.out.println(this.name + " menerima damage sebanyak " + damage);
     }
 

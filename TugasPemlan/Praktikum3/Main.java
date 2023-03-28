@@ -10,31 +10,31 @@ public class Main {
         System.out.println("Silakan masukkan hero Anda");
 
         Hero hero1 = new Hero();
-        System.out.print("Nama hero: ");
+        System.out.print("Nama hero\t: ");
         hero1.setName(input.nextLine());
-        System.out.print("Health: ");
+        System.out.print("Health\t\t: ");
         hero1.setHp(input.nextDouble());
-        System.out.print("Attack: ");
+        System.out.print("Attack\t\t: ");
         hero1.setAttack(input.nextDouble());
-        System.out.print("Defence: ");
+        System.out.print("Defence\t\t: ");
         hero1.setDefence(input.nextDouble());
 
         input.nextLine();
-        System.out.println("Silakan masukkan hero lawan");
+        System.out.println("Silakan masukkan hero lawan!!");
         Hero hero2 = new Hero();
-        System.out.print("Nama hero: ");
+        System.out.print("Nama hero\t: ");
         hero2.setName(input.nextLine());
-        System.out.print("Health: ");
+        System.out.print("Health\t\t: ");
         hero2.setHp(input.nextDouble());
-        System.out.print("Attack: ");
+        System.out.print("Attack\t\t: ");
         hero2.setAttack(input.nextDouble());
-        System.out.print("Defence: ");
+        System.out.print("Defence\t\t: ");
         hero2.setDefence(input.nextDouble());
 
+        int i = 0;
         while(hero1.getHp() > 0 && hero2.getHp() > 0){
-            int i = 1;
+            i++;
             System.out.println("\n================= War Round " + (i) + " =================");
-
             hero1.attack(hero2);
             hero1.display();
             hero2.display();
@@ -43,6 +43,7 @@ public class Main {
                 System.out.println(hero2.getName() + " MATI!");
                 break;
             }
+            System.out.println("\n================= War Round " + (i+1) + " =================");
             hero2.attack(hero1);
             hero1.display();
             hero2.display();
