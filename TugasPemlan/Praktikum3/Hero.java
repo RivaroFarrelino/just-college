@@ -1,5 +1,5 @@
 package TugasPemlan.Praktikum3;
-
+//a
 public class Hero {
     private String name;
     private double health;
